@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-const ShowButton = ({ show, setFilter }) => (
-  <button onClick={() => setFilter(show)}>Show</button>
+const ShowButton = ({ countryName, setFilter }) => (
+  <button onClick={() => setFilter(countryName)}>Show</button>
 );
 
 const Countries = ({ countries, setFilter }) => {
-  const [show, setShow] = useState(false);
-
   return countries.length < 10 ? (
     countries.map((country) => (
       <p>
         {country.name}{" "}
-        {<ShowButton show={country.name} setFilter={setFilter} />}
+        {<ShowButton countryName={country.name} setFilter={setFilter} />}
       </p>
     ))
   ) : (

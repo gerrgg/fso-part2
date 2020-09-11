@@ -25,7 +25,6 @@ const App = () => {
       )
     : countries;
 
-  console.log(countriesToShow);
   return (
     <div>
       <h1>Countries</h1>
