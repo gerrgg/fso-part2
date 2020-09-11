@@ -7,8 +7,7 @@ const ShowButton = ({ show, setFilter }) => (
 const Countries = ({ countries, setFilter }) => {
   const [show, setShow] = useState(false);
 
-  console.log(countries);
-  return countries.length > 10 ? (
+  return countries.length < 10 ? (
     countries.map((country) => (
       <p>
         {country.name}{" "}
